@@ -17,7 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="100dp"
+        android:transitionName="1.1"/>
 
     <ImageView
         android:id="@+id/image_rec_1"
@@ -26,7 +27,8 @@
         android:src="@drawable/rec_1"
         app:layout_constraintStart_toStartOf="@id/text_1"
         app:layout_constraintTop_toBottomOf="@id/text_1"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="100dp"
+        android:transitionName="1.2"/>
 
     <TextView
         android:id="@+id/image_rec_1_text"
@@ -38,7 +40,8 @@
         app:layout_constraintStart_toStartOf="@id/image_rec_1"
         app:layout_constraintEnd_toEndOf="@id/image_rec_1"
         app:layout_constraintTop_toTopOf="@id/image_rec_1"
-        app:layout_constraintBottom_toBottomOf="@id/image_rec_1"/>
+        app:layout_constraintBottom_toBottomOf="@id/image_rec_1"
+        android:transitionName="1.3"/>
 
     <ImageView
         android:id="@+id/image_rec_2"
@@ -47,7 +50,8 @@
         android:src="@drawable/rec_1"
         app:layout_constraintEnd_toEndOf="@id/text_1"
         app:layout_constraintTop_toBottomOf="@id/text_1"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="100dp"
+        android:transitionName="1.4"/>
 
     <TextView
         android:id="@+id/image_rec_2_text"
@@ -59,7 +63,8 @@
         app:layout_constraintStart_toStartOf="@id/image_rec_2"
         app:layout_constraintEnd_toEndOf="@id/image_rec_2"
         app:layout_constraintTop_toTopOf="@id/image_rec_2"
-        app:layout_constraintBottom_toBottomOf="@id/image_rec_2"/>
+        app:layout_constraintBottom_toBottomOf="@id/image_rec_2"
+        android:transitionName="1.5"/>
 
     <ImageView
         android:id="@+id/image_rec_3"
@@ -68,7 +73,8 @@
         android:src="@drawable/rec_1"
         app:layout_constraintStart_toStartOf="@id/text_1"
         app:layout_constraintTop_toBottomOf="@id/image_rec_1"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="100dp"
+        android:transitionName="1.6"/>
 
     <TextView
         android:id="@+id/image_rec_3_text"
@@ -80,7 +86,8 @@
         app:layout_constraintStart_toStartOf="@id/image_rec_3"
         app:layout_constraintEnd_toEndOf="@id/image_rec_3"
         app:layout_constraintTop_toTopOf="@id/image_rec_3"
-        app:layout_constraintBottom_toBottomOf="@id/image_rec_3"/>
+        app:layout_constraintBottom_toBottomOf="@id/image_rec_3"
+        android:transitionName="1.7"/>
 
     <ImageView
         android:id="@+id/image_rec_4"
@@ -89,7 +96,8 @@
         android:src="@drawable/rec_1"
         app:layout_constraintEnd_toEndOf="@id/text_1"
         app:layout_constraintTop_toBottomOf="@id/image_rec_2"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="100dp"
+        android:transitionName="1.8"/>
 
     <TextView
         android:id="@+id/image_rec_4_text"
@@ -101,7 +109,8 @@
         app:layout_constraintStart_toStartOf="@id/image_rec_4"
         app:layout_constraintEnd_toEndOf="@id/image_rec_4"
         app:layout_constraintTop_toTopOf="@id/image_rec_4"
-        app:layout_constraintBottom_toBottomOf="@id/image_rec_4"/>
+        app:layout_constraintBottom_toBottomOf="@id/image_rec_4"
+        android:transitionName="1.9"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

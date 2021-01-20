@@ -17,42 +17,29 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
+    TextView textView1,textView2;
 
-    TextView textView1,textView2,textView3,textView4,textView5;
-
-    ImageView imageView1,imageView2,imageView3,imageView4;
+    ImageView imageView1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
 
         textView1 = findViewById(R.id.text_1);
-        textView2 = findViewById(R.id.image_rec_1_text);
-        textView3 = findViewById(R.id.image_rec_2_text);
-        textView4 = findViewById(R.id.image_rec_3_text);
-        textView5 = findViewById(R.id.image_rec_4_text);
+        textView2 = findViewById(R.id.text_2);
 
-        imageView1 = findViewById(R.id.image_rec_1);
-        imageView2 = findViewById(R.id.image_rec_2);
-        imageView3 = findViewById(R.id.image_rec_3);
-        imageView4 = findViewById(R.id.image_rec_4);
+        imageView1 = findViewById(R.id.image_1);
 
         setColorToGradiant(textView1);
         setColorToGradiant(textView2);
-        setColorToGradiant(textView3);
-        setColorToGradiant(textView4);
-        setColorToGradiant(textView5);
 
         click_1();
-        click_2();
-        click_3();
-        click_4();
     }
 
     private void setColorToGradiant(TextView textView){
@@ -83,47 +70,22 @@ public class MainActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 
-                Pair[] pairs = new Pair[3];
-                pairs[0] = new Pair<View,String>(imageView1,"2.1");
-                pairs[1] = new Pair<View,String>(imageView1,"2.2");
-                pairs[2] = new Pair<View,String>(imageView1,"2.3");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
+                Pair[] pairs = new Pair[9];
+                pairs[0] = new Pair<View,String>(imageView1,"1.1");
+                pairs[1] = new Pair<View,String>(imageView1,"1.2");
+                pairs[2] = new Pair<View,String>(imageView1,"1.3");
+                pairs[3] = new Pair<View,String>(imageView1,"1.4");
+                pairs[4] = new Pair<View,String>(imageView1,"1.5");
+                pairs[5] = new Pair<View,String>(imageView1,"1.6");
+                pairs[6] = new Pair<View,String>(imageView1,"1.7");
+                pairs[7] = new Pair<View,String>(imageView1,"1.8");
+                pairs[8] = new Pair<View,String>(imageView1,"1.9");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
         });
     }
-
-    public void click_2(){
-        imageView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-    public void click_3(){
-        imageView3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-    public void click_4(){
-        imageView4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
 }
