@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 public class MainActivity5 extends AppCompatActivity {
 
-    TextView textView1,textView2;
+    TextView textView1,textView2,textView3;
 
     ImageView imageView1;
 
@@ -34,11 +34,13 @@ public class MainActivity5 extends AppCompatActivity {
 
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
+        textView3 = findViewById(R.id.text_3);
 
         imageView1 = findViewById(R.id.image_1);
 
         setColorToGradiant(textView1);
         setColorToGradiant(textView2);
+        setColorToGradiant(textView3);
 
         click_1();
     }
