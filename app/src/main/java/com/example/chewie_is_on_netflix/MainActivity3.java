@@ -14,13 +14,27 @@ import android.text.TextPaint;
 import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Adapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity3 extends AppCompatActivity {
     TextView textView1,textView2;
 
     ImageView imageView1;
+
+    ListView listView;
+
+    String namen[] = {"jasper","yago","phara","yago"};
+
+    // order zonder fem
+    int images[] = {R.drawable.banner_1_1,R.drawable.banner_3,R.drawable.banner_2_1,R.drawable.banner_3};
+
+    // order met fem
+    //int images[] = {R.drawable.banner_1,R.drawable.banner_2,R.drawable.banner_3,R.drawable.banner_4};
+
+    MainActivity3listViewAdapter mainActivity3listViewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +49,11 @@ public class MainActivity3 extends AppCompatActivity {
         textView2 = findViewById(R.id.text_2);
 
         imageView1 = findViewById(R.id.image_1);
+
+        listView = findViewById(R.id.list_view_1);
+
+        mainActivity3listViewAdapter = new MainActivity3listViewAdapter(this,namen,images);
+        listView.setAdapter(mainActivity3listViewAdapter);
 
         click_1();
 
