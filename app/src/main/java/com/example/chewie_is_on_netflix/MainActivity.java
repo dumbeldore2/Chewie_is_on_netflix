@@ -136,12 +136,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void click_4(){
         imageView4.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(),MainActivity5.class);
+
+                Pair[] pairs = new Pair[3];
+                pairs[0] = new Pair<View,String>(imageView4,"5.1");
+                pairs[1] = new Pair<View,String>(imageView4,"5.2");
+                pairs[2] = new Pair<View,String>(imageView4,"5.3");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,
+                        pairs);
+
+                startActivity(intent,options.toBundle());
             }
         });
     }
-
 }
