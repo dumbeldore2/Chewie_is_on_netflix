@@ -15,12 +15,22 @@ import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity4 extends AppCompatActivity {
     TextView textView1,textView2;
 
     ImageView imageView1;
+
+    ListView listView;
+
+    String namen[] = {"jasper","yago","phara","yago","yago","yago"};
+
+    // order zonder fem
+    int images[] = {R.drawable.banner_1_1,R.drawable.banner_3,R.drawable.banner_2_1,R.drawable.banner_3,R.drawable.banner_3,R.drawable.banner_3};
+
+    MainActivity4listViewAdapter mainActivity4listViewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +45,12 @@ public class MainActivity4 extends AppCompatActivity {
         textView2 = findViewById(R.id.text_2);
 
         imageView1 = findViewById(R.id.image_1);
-        
+
+        listView = findViewById(R.id.list_view_1);
+
+        mainActivity4listViewAdapter = new MainActivity4listViewAdapter(this,namen,images);
+        listView.setAdapter(mainActivity4listViewAdapter);
+
         setColorToGradiant(textView1);
         setColorToGradiant(textView2);
 

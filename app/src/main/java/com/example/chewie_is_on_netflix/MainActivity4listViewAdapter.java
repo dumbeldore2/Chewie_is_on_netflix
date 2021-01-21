@@ -15,14 +15,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class MainActivity3listViewAdapter extends ArrayAdapter<String> {
+public class MainActivity4listViewAdapter extends ArrayAdapter<String> {
 
     Context context;
     String string[];
     int anInt[];
 
-    public MainActivity3listViewAdapter(@NonNull Context c, String s[] , int i[]) {
-        super(c,R.layout.activity_main3_row, R.id.text_listview,s);
+    public MainActivity4listViewAdapter(@NonNull Context c, String s[] , int i[]) {
+        super(c,R.layout.activity_main4_row, R.id.text_listview,s);
         this.context = c;
         this.string = s;
         this.anInt = i;
@@ -32,13 +32,18 @@ public class MainActivity3listViewAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater layoutInflater = (LayoutInflater)getContext().getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View row = layoutInflater.inflate(R.layout.activity_main3_row,parent,false);
+        View row = layoutInflater.inflate(R.layout.activity_main4_row,parent,false);
         ImageView images = row.findViewById(R.id.image_listview);
         TextView names = row.findViewById(R.id.text_listview);
+        TextView number = row.findViewById(R.id.text_2_listview);
+        TextView datum = row.findViewById(R.id.text_3_listview);
 
         images.setImageResource(anInt[position]);
         setColorToGradiant(names);
+        setColorToGradiant(number);
+        setColorToGradiant(datum);
         names.setText(string[position]);
+        number.setText(""+position);
 
         return row;
     }
@@ -65,4 +70,4 @@ public class MainActivity3listViewAdapter extends ArrayAdapter<String> {
                 },null,Shader.TileMode.CLAMP);
         textView.getPaint().setShader(shader);
     }
- }
+}
