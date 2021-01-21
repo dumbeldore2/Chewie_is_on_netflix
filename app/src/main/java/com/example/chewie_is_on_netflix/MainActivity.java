@@ -98,20 +98,38 @@ public class MainActivity extends AppCompatActivity {
 
     public void click_2(){
         imageView2.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(),MainActivity3.class);
+
+                Pair[] pairs = new Pair[3];
+                pairs[0] = new Pair<View,String>(imageView2,"3.1");
+                pairs[1] = new Pair<View,String>(imageView2,"3.2");
+                pairs[2] = new Pair<View,String>(imageView2,"3.3");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,
+                        pairs);
+
+                startActivity(intent,options.toBundle());
             }
         });
     }
 
     public void click_3(){
         imageView3.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(),MainActivity4.class);
+
+                Pair[] pairs = new Pair[3];
+                pairs[0] = new Pair<View,String>(imageView3,"4.1");
+                pairs[1] = new Pair<View,String>(imageView3,"4.2");
+                pairs[2] = new Pair<View,String>(imageView3,"4.3");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,
+                        pairs);
+
+                startActivity(intent,options.toBundle());
             }
         });
     }
