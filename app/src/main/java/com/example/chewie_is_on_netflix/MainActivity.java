@@ -85,10 +85,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
 
-                Pair[] pairs = new Pair[3];
+                Pair[] pairs = new Pair[7];
                 pairs[0] = new Pair<View,String>(imageView1,"2.1");
                 pairs[1] = new Pair<View,String>(imageView1,"2.2");
                 pairs[2] = new Pair<View,String>(imageView1,"2.3");
+                pairs[3] = new Pair<View,String>(imageView1,"2.4");
+                pairs[4] = new Pair<View,String>(imageView1,"2.5");
+                pairs[5] = new Pair<View,String>(imageView1,"2.6");
+                pairs[6] = new Pair<View,String>(imageView1,"2.7");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
 
                 startActivity(intent,options.toBundle());
