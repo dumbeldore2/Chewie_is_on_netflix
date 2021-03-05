@@ -55,4 +55,40 @@
         app:layout_constraintTop_toBottomOf="@id/image_1"
         android:transitionName="4"/>
 
+    <TextView
+        android:id="@id/text_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text_4"
+        android:text="yago"
+        android:textColor="@color/wit"
+        android:textSize="50dp"
+        android:transitionName="5"/>
+
+    <TextView
+        android:id="@+id/text_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text_5"
+        android:text="until"
+        android:textColor="@color/wit"
+        android:textSize="40dp"
+        android:transitionName="6"/>
+
+    <TextView
+        android:id="@+id/text_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="20 maart 2020"
+        android:textColor="@color/wit"
+        android:textSize="50dp"
+        android:transitionName="7"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
