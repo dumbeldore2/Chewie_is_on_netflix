@@ -32,6 +32,7 @@ public class MainActivity4 extends AppCompatActivity {
 
     MainActivity4listViewAdapter mainActivity4listViewAdapter;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +41,8 @@ public class MainActivity4 extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
+        getWindow().setNavigationBarColor(Color.parseColor("#7C0A02"));
+        getWindow().setStatusBarColor(Color.parseColor("#000000"));
 
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
@@ -89,15 +92,15 @@ public class MainActivity4 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 
                 Pair[] pairs = new Pair[9];
-                pairs[0] = new Pair<View,String>(imageView1,"1.1");
-                pairs[1] = new Pair<View,String>(imageView1,"1.2");
-                pairs[2] = new Pair<View,String>(imageView1,"1.3");
-                pairs[3] = new Pair<View,String>(imageView1,"1.4");
-                pairs[4] = new Pair<View,String>(imageView1,"1.5");
-                pairs[5] = new Pair<View,String>(imageView1,"1.6");
-                pairs[6] = new Pair<View,String>(imageView1,"1.7");
-                pairs[7] = new Pair<View,String>(imageView1,"1.8");
-                pairs[8] = new Pair<View,String>(imageView1,"1.9");
+                pairs[0] = new Pair<View,String>(imageView1,"1");
+                pairs[1] = new Pair<View,String>(imageView1,"2");
+                pairs[2] = new Pair<View,String>(imageView1,"3");
+                pairs[3] = new Pair<View,String>(imageView1,"4");
+                pairs[4] = new Pair<View,String>(imageView1,"5");
+                pairs[5] = new Pair<View,String>(imageView1,"6");
+                pairs[6] = new Pair<View,String>(imageView1,"7");
+                pairs[7] = new Pair<View,String>(imageView1,"8");
+                pairs[8] = new Pair<View,String>(imageView1,"9");
                 ActivityOptions options =
                         ActivityOptions.makeSceneTransitionAnimation(MainActivity4.this,
                                 pairs);

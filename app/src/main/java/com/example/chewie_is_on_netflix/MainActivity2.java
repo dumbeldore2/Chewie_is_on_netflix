@@ -22,6 +22,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     ImageView imageView1;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,22 +31,17 @@ public class MainActivity2 extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
+        getWindow().setNavigationBarColor(Color.parseColor("#7C0A02"));
+        getWindow().setStatusBarColor(Color.parseColor("#000000"));
 
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
         textView3 = findViewById(R.id.text_3);
-        textView4 = findViewById(R.id.text_4);
-        textView5 = findViewById(R.id.text_5);
-        textView6 = findViewById(R.id.text_6);
 
         imageView1 = findViewById(R.id.image_1);
 
         setColorToGradiant(textView1);
         setColorToGradiant(textView2);
-        setColorToGradiant(textView3);
-        setColorToGradiant(textView4);
-        setColorToGradiant(textView5);
-        setColorToGradiant(textView6);
 
         click_1();
     }
@@ -81,15 +77,15 @@ public class MainActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 
                 Pair[] pairs = new Pair[9];
-                pairs[0] = new Pair<View,String>(imageView1,"1.1");
-                pairs[1] = new Pair<View,String>(imageView1,"1.2");
-                pairs[2] = new Pair<View,String>(imageView1,"1.3");
-                pairs[3] = new Pair<View,String>(imageView1,"1.4");
-                pairs[4] = new Pair<View,String>(imageView1,"1.5");
-                pairs[5] = new Pair<View,String>(imageView1,"1.6");
-                pairs[6] = new Pair<View,String>(imageView1,"1.7");
-                pairs[7] = new Pair<View,String>(imageView1,"1.8");
-                pairs[8] = new Pair<View,String>(imageView1,"1.9");
+                pairs[0] = new Pair<View,String>(imageView1,"1");
+                pairs[1] = new Pair<View,String>(imageView1,"2");
+                pairs[2] = new Pair<View,String>(imageView1,"3");
+                pairs[3] = new Pair<View,String>(imageView1,"4");
+                pairs[4] = new Pair<View,String>(imageView1,"5");
+                pairs[5] = new Pair<View,String>(imageView1,"6");
+                pairs[6] = new Pair<View,String>(imageView1,"7");
+                pairs[7] = new Pair<View,String>(imageView1,"8");
+                pairs[8] = new Pair<View,String>(imageView1,"9");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
 
                 startActivity(intent,options.toBundle());

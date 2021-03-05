@@ -1,11 +1,13 @@
 package com.example.chewie_is_on_netflix;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextPaint;
@@ -25,6 +27,7 @@ public class MainActivity6 extends AppCompatActivity {
 
     Animation animation1,animation2;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,8 @@ public class MainActivity6 extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
+        getWindow().setNavigationBarColor(Color.parseColor("#7C0A02"));
+        getWindow().setStatusBarColor(Color.parseColor("#000000"));
 
         textView1 = findViewById(R.id.text_1);
 

@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="100dp"
         android:layout_marginLeft="15dp"
-        android:transitionName="2.1"/>
+        android:transitionName="1"/>
 
     <ImageView
         android:id="@+id/image_1"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="112dp"
         android:layout_marginRight="15dp"
-        android:transitionName="2.2"/>
+        android:transitionName="2"/>
 
     <TextView
         android:id="@+id/text_2"
@@ -43,58 +43,16 @@
         app:layout_constraintTop_toTopOf="@id/image_1"
         app:layout_constraintEnd_toEndOf="@id/image_1"
         app:layout_constraintBottom_toBottomOf="@id/image_1"
-        android:transitionName="2.3"/>
+        android:transitionName="3"/>
 
-    <TextView
-        android:id="@+id/text_3"
+    <ImageView
+        android:id="@id/image_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="the next one is : "
-        android:textSize="30dp"
-        android:textColor="@color/wit"
+        android:src="@drawable/dubbele_cirkel1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_1"
-        android:layout_marginTop="50dp"
-        android:transitionName="2.4"/>
-
-    <TextView
-        android:id="@+id/text_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="default "
-        android:textSize="30dp"
-        android:textColor="@color/wit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_3"
-        android:layout_marginTop="25dp"
-        android:transitionName="2.5"/>
-
-    <TextView
-        android:id="@+id/text_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="tot de datum : "
-        android:textSize="30dp"
-        android:textColor="@color/wit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_4"
-        android:layout_marginTop="50dp"
-        android:transitionName="2.6"/>
-
-    <TextView
-        android:id="@+id/text_6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="default "
-        android:textSize="30dp"
-        android:textColor="@color/wit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_5"
-        android:layout_marginTop="25dp"
-        android:transitionName="2.7"/>
+        app:layout_constraintTop_toBottomOf="@id/image_1"
+        android:transitionName="4"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
